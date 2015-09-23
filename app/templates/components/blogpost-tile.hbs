@@ -1,0 +1,17 @@
+{{yield}}
+
+<div class="col-md-4">
+  <div class="jumbotron post-jumbotron">
+    <div class="segment">
+
+    <h3>{{#link-to 'blogpost' blogpost.id}}{{blogpost.title}}{{/link-to}}</h3>
+    </div>
+    <div class="segment">
+      <h5> by: <em>{{blogpost.author}}</em></h5>
+      <h5>last updated: <em>{{blogpost.date}}</em></h5>
+    </div>
+  <div class="segment">
+    {{update-blogpost blogpost=blogpost update="update"}} <button class="btn btn-primary delete-button" {{action 'delete' blogpost}}>Delete</button>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{{outlet}}
+
+<div class="jumbotron new-post">
+  {{new-blogpost save="save"}}
+</div>
+
+<div class="row">
+  {{#each model as |blogpost|}}
+    {{blogpost-tile blogpost=blogpost update="update" destroyBlogpost="destroyBlogpost"}}
+
+  {{/each}}
+</div>
