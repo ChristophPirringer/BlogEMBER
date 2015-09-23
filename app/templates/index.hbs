@@ -5,7 +5,7 @@
 </div>
 
 <div class="row">
-  {{#each model as |blogpost|}}
+  {{#each model.blogposts as |blogpost|}}
     {{blogpost-tile blogpost=blogpost update="update" destroyBlogpost="destroyBlogpost"}}
 
   {{/each}}

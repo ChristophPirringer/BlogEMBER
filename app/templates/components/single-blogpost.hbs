@@ -2,10 +2,39 @@
 
 <h1>{{blogpost.title}}</h1>
 
-Written by {{blogpost.author}} on the {{blogpost.date}}, this post deals with {{blogpost.tag}}.
-Here's a picture, whatever
-<p><img src={{blogpost.picture}} alt={{blogpost.title}}></p>
+Written by <em>{{blogpost.author}} on the {{blogpost.date}}</em>
+<br>
+Attached tags: <em>{{blogpost.tag}}</em>.
+<br>
+<p class = "post-picture"><img src={{blogpost.picture}} alt={{blogpost.title}}></p>
 <br>
 <p>
   {{blogpost.content}}
 </p>
+
+<div class="jumbotron comment commentlist">
+  all dem comments go here
+  <!-- here there be comments, someday -->
+</div>
+
+<div class="jumbotron comment commentform">
+  <div class="new-comment-form">
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        {{input class="form-control" value=username id="username"}}
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date</label>
+        {{input class="form-control" value=date id="date"}}
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content</label>
+        {{input class="form-control" value=content id="content"}}
+      </div>
+      <button class="btn btn-primary" {{action 'save'}}>Save</button>
+    </form>
+  </div>
+</div>

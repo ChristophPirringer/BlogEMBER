@@ -2,7 +2,6 @@
 -------Global--------
 ***********************/
 body{
-  /*background-image: url('/img/background.jpeg');*/
   background-image: url('images/background.jpeg') !important;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,21 +28,32 @@ nav.container {
   text-align: left;
 }
 
-.update-button{
-  float:left;
-  position: absolute;
-  bottom: 50px;
-  left:25%;
-}
-
-.delete-button{
-  float:right;
-  position: absolute;
-  bottom: 50px;
-  right:25%
-}
-
 .segment{
   height:33%;
-  /*padding-top:2rem;*/
+  padding-top:1.2rem;
+}
+
+.glyphicon {
+  cursor: pointer;
+  font-size: 2rem;
+  /*float:center;*/
+}
+
+.glyphicon:hover{
+  color:darkblue;
+  text-decoration:underline;
+}
+
+.jumbotron {
+  text-align:center;
+}
+
+.post-picture{
+  float:right;
+  border:2px solid grey;
+  border-radius:3rem;
+}
+
+.comment{
+  width:50%;
 }

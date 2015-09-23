@@ -29,10 +29,13 @@
           <label for="picture">Picture URL</label>
           {{input value=picture id="picture" placeholder=blogpost.picture}}
         </div>
+        <span title="save update" {{action 'update' blogpost}} class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+        <span title="cancel update" {{action 'updateBlogpostHide'}} class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
 
-        <button class="btn btn-primary" {{action 'update' blogpost}}>Save</button>
       </form>
     </div>
 {{else}}
-    <button class="btn btn-primary update-button" {{action 'updateBlogpostForm'}}>Update</button>
+
+    <span title="update post" {{action 'updateBlogpostForm' blogpost}} class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+
 {{/if}}

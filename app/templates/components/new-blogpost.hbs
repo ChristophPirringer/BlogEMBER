@@ -34,11 +34,13 @@
           {{input class="form-control" value=picture id="picture"}}
         </div>
 
-        <button class="btn btn-primary" {{action 'save'}}>Save</button>
-        <button class="btn btn-primary"{{action 'blogpostFormHide'}}>Nevermind!</button>
+        <span title="save post" {{action 'save'}} class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+        <span title="cancel post" {{action 'blogpostFormHide'}} class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
 
       </form>
     </div>
 {{else}}
-  <button class="btn btn-primary"{{action 'blogpostFormShow'}}>Write New Post!</button>
+  <!-- <button class="btn btn-primary"{{action 'blogpostFormShow'}}>Write New Post!</button> -->
+  <span title="Write New Post!" {{action 'blogpostFormShow' }} class="glyphicon glyphicon-file" aria-hidden="true"></span>
+
 {{/if}}

@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     updateBlogpostForm() {
       this.set('updateBlogpostForm', true);
     },
+    updateBlogpostHide() {
+      this.set('updateBlogpostForm', false);
+    },
 
     update(blogpost) {
       var params = {
