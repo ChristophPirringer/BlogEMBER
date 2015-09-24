@@ -7,6 +7,10 @@ body{
   background-size: cover;
 }
 
+.posted-comment {
+  text-align:left;
+}
+
 nav.container {
   padding:0px;
 }

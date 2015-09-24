@@ -26,6 +26,9 @@ export default Ember.Route.extend({
     },
 
     destroyBlogpost(blogpost) {
+      blogpost.get('comments').forEach(function(comment){
+        comment.destroyRecord();
+      });
       blogpost.destroyRecord();
       this.transitionTo('index');
     }
