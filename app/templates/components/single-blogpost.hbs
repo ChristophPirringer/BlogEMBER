@@ -11,9 +11,9 @@ Attached tags: <em>{{blogpost.tag}}</em>.
 <p>
   {{blogpost.content}}
 </p>
-<span title="upvote" {{action 'upvoteBlogpost' blogpost}} class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+<span title="upvote" {{action 'upvoteBlogpost' blogpost}} class="glyphicon glyphicon-arrow-up" style="color:green" aria-hidden="true"></span>
   {{blogpost.rating}}
-<span title="downvote" {{action 'downvoteBlogpost' blogpost}} class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+<span title="downvote" {{action 'downvoteBlogpost' blogpost}} class="glyphicon glyphicon-arrow-down" style="color:red" aria-hidden="true"></span>
 
 <div class="jumbotron comment commentlist">
   all dem comments go here

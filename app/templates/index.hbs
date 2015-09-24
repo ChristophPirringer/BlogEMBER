@@ -11,6 +11,12 @@
         </div>
       </div>
 
+      <div class="item">
+        <h2>Read The Latest Comments!</h2>
+        <div class="carousel-caption">
+        </div>
+      </div>
+
       {{#each model.comments as |comment|}}
         <div class="item">
           {{#link-to 'blogpost' comment.blogpost}}<h3><em>{{comment.content}}</em></h3><br><h5>in: {{comment.blogpost.title}}</h5>{{/link-to}}
