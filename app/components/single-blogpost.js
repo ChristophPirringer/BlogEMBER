@@ -9,8 +9,13 @@ export default Ember.Component.extend({
       this.sendAction('deleteComment', comment);
     },
     editComment(comment, params) {
-      debugger;
       this.sendAction('editComment', comment, params);
+    },
+    upvoteBlogpost(blogpost) {
+      this.sendAction('upvoteBlogpost', blogpost);
+    },
+    downvoteBlogpost(blogpost) {
+      this.sendAction('downvoteBlogpost', blogpost);
     }
   }
 });

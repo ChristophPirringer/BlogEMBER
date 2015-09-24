@@ -8,11 +8,12 @@ body{
 }
 
 .carousel {
-  min-height: 100px;
+  min-height: 120px;
 }
 
 .item-active {
   text-align:center !important;
+  line-height:100%;
 }
 
 .posted-comment {

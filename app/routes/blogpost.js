@@ -26,5 +26,17 @@ export default Ember.Route.extend({
       comment.save();
       this.transitionTo('blogpost');
     },
+    upvoteBlogpost(blogpost) {
+      var newRating = parseInt(blogpost.get('rating')) +1;
+      blogpost.set('rating', newRating);
+      blogpost.save();
+      this.transitionTo('blogpost');
+    },
+    downvoteBlogpost(blogpost) {
+      var newRating = blogpost.get('rating') -1;
+      blogpost.set('rating', newRating);
+      blogpost.save();
+      this.transitionTo('blogpost');
+    }
   }
 });

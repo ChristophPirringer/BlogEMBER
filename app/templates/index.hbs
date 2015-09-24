@@ -2,12 +2,6 @@
 
 <div class="jumbotron">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
@@ -19,7 +13,7 @@
 
       {{#each model.comments as |comment|}}
         <div class="item">
-          <h3><em>{{#link-to 'blogpost' comment.blogpost}}{{comment.content}}{{/link-to}}</em></h3>
+          {{#link-to 'blogpost' comment.blogpost}}<h3><em>{{comment.content}}</em></h3><br><h5>in: {{comment.blogpost.title}}</h5>{{/link-to}}
           <div class="carousel-caption">
           </div>
         </div>
