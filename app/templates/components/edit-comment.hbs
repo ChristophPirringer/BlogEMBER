@@ -1,0 +1,28 @@
+{{yield}}
+
+{{#if editCommentForm}}
+  <h4>Update {{comment.username}}'s comment!</h4>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="username">Author</label>
+          {{input value=username id="username" placeholder=comment.username}}
+        </div>
+        <div class="form-group">
+          <label for="date">Date</label>
+          {{input value=date id="date" placeholder=comment.date}}
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          {{input value=content id="content" placeholder=comment.content}}
+        </div>
+        <span title="save update" {{action 'editComment' comment}} class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+        <span title="cancel update" {{action 'editCommentHide'}} class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
+
+      </form>
+    </div>
+{{else}}
+
+    <span title="update comment" {{action 'editCommentForm' comment}} class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+
+{{/if}}

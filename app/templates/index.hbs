@@ -1,5 +1,44 @@
 {{outlet}}
 
+<div class="jumbotron">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h1>WELCOME TO OUR BLOG</h1>
+        <div class="carousel-caption">
+        </div>
+      </div>
+
+      {{#each model.comments as |comment|}}
+        <div class="item">
+          <h3><em>{{#link-to 'blogpost' comment.blogpost}}{{comment.content}}{{/link-to}}</em></h3>
+          <div class="carousel-caption">
+          </div>
+        </div>
+      {{/each}}
+
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
 <div class="jumbotron new-post">
   {{new-blogpost save="save"}}
 </div>

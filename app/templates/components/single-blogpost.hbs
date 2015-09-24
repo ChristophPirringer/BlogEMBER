@@ -20,6 +20,8 @@ Attached tags: <em>{{blogpost.tag}}</em>.
       <h2>{{comment.username}}</h2>
       <h5><em>{{comment.date}}</em></h5>
       <p>{{comment.content}}</p>
+      <span title="delete" {{action 'deleteComment' comment}} class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+      {{edit-comment comment=comment editComment="editComment"}}
     </div>
   {{/each}}
 

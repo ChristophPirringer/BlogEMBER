@@ -7,6 +7,14 @@ body{
   background-size: cover;
 }
 
+.carousel {
+  min-height: 100px;
+}
+
+.item-active {
+  text-align:center !important;
+}
+
 .posted-comment {
   text-align:left;
 }
